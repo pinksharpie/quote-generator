@@ -1,0 +1,137 @@
+body {
+    font-family: 'Roboto Mono', monospace; 
+    background: rgb(97, 112, 246);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.unordered-list {
+    list-style: none;
+}
+
+.wrapper {
+    width: 600px;
+    background: rgb(254, 203, 229);
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+    box-shadow: 0 12px 35px rgba(8, 36, 136, 0.531);
+}
+
+header, .content :where(i, p, span){
+    color: #063bea;
+}
+
+.wrapper header {
+    font-size: 38px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper .content {
+    margin: 35px;
+}
+
+.wrapper .quote-area {
+    display: flex;
+    justify-content: center;
+}
+
+.quote-area i {
+    font-size: 20px;
+}
+
+.quote-area i:first-child {
+    margin: 3px 10px 0 0;
+}
+
+.quote-area i:last-child {
+display: flex;
+margin:  0 0 3px 10px;
+align-items: flex-end;
+}
+
+.quote-area .quote {
+    font-size: 18px;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.content .author {
+    display: flex;
+    font-size: 14px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-style: italic;
+    justify-content: flex-end;
+}
+
+.author span:first-child {
+    margin: -7px 5px 0 0;
+    font-family: monospace;
+}
+
+.wrapper .buttons {
+    border-top: 1px solid rgb(97, 112, 246);
+}
+
+.buttons .features {
+    display: flex;
+    margin-top: 40px;
+    margin-left: -35px;
+    margin-bottom: -40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.features ul {
+    display: flex;
+}
+
+.features ul li {
+    margin: -10px 8px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(97, 112, 246);
+    transition: all 0.3s ease;
+}
+
+.features ul li:first-child {
+    margin-left: 0;
+}
+
+ul li:is(:hover, .active) {
+    color: rgb(255, 255, 255);
+    background: rgb(180, 195, 251);
+}
+
+ul .speech.active {
+    pointer-events: none;
+}
+
+.buttons .new-button {
+    border: none;
+    color:rgb(245, 209, 224);
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background:rgb(97, 112, 246);
+    font-family: 'Roboto Mono', monospace;;
+}
+
+.buttons button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
